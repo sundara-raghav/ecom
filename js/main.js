@@ -31,7 +31,8 @@
         return false;
     });
 
-
+    
+    
     // Vendor carousel
     $('.vendor-carousel').owlCarousel({
         loop: true,
