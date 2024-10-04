@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> kanjivaram-Saree Collection</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .rating i {
+            font-size: 24px;
+            color: gold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+     <!-- Back button -->
+     <a href="index.html" class="back-button" style="position: absolute; top: 20px; left: 20px; font-size: 24px; color: black;">
+        <i class='bx bx-arrow-back'></i>
+    </a>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">kanjivaram Saree Collection</h2>
+        <div class="row">
+            <!-- Silk Saree 1 -->
+            <div class="col-md-3">
+                <div class="card">
+                    <a href="kanjivaram detail1.html">
+                    <img src="img/saree1.jpg" class="card-img-top" alt=""></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Elegant kanjivaram Saree</h5>
+                        <p class="card-text">Price: $180</p>
+                        <p class="card-text">Details: This saree offers a perfect blend of elegance and tradition.</p>
+                        <p>Rating...</p>
+                        <!-- Editable Rating -->
+                        <div class="rating" data-rating="5">
+                            <i class="fas fa-star" data-value="1"></i>
+                            <i class="fas fa-star" data-value="2"></i>
+                            <i class="fas fa-star" data-value="3"></i>
+                            <i class="fas fa-star" data-value="4"></i>
+                            <i class="fas fa-star" data-value="5"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Silk Saree 2 -->
+            <div class="col-md-3">
+                <div class="card">
+                    <a href="kanjivaram detail2.html">
+                    <img src="img/saree2.jpg" class="card-img-top" alt=""></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Classic kanjivaram Saree</h5>
+                        <p class="card-text">Price: $200</p>
+                        <p class="card-text">Details: A timeless piece perfect for weddings and festive occasions.</p>
+                        <p>Rating...</p>
+                        <!-- Editable Rating -->
+                        <div class="rating" data-rating="5">
+                            <i class="fas fa-star" data-value="1"></i>
+                            <i class="fas fa-star" data-value="2"></i>
+                            <i class="fas fa-star" data-value="3"></i>
+                            <i class="fas fa-star" data-value="4"></i>
+                            <i class="fas fa-star" data-value="5"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Silk Saree 3 -->
+            <div class="col-md-3">
+                <div class="card">
+                    <a href="kanjivaram detail3.html">
+                    <img src="img/saree5.jpg" class="card-img-top" alt="Silk Saree 3"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Designer kanjivaram Saree</h5>
+                        <p class="card-text">Price: $220</p>
+                        <p class="card-text">Details: A designer saree with a modern twist on traditional silk fabric.</p>
+                        <p>Rating...</p>
+                        <!-- Editable Rating -->
+                        <div class="rating" data-rating="5">
+                            <i class="fas fa-star" data-value="1"></i>
+                            <i class="fas fa-star" data-value="2"></i>
+                            <i class="fas fa-star" data-value="3"></i>
+                            <i class="fas fa-star" data-value="4"></i>
+                            <i class="fas fa-star" data-value="5"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Silk Saree 4 -->
+            <div class="col-md-3">
+                <div class="card">
+                    <a href="kanjivaram detail4.html">
+                    <img src="img/saree9.jpg" class="card-img-top" alt="Silk Saree 4"></a>
+                    <div class="card-body">
+                        <h5 class="card-title">Luxury kanjivaram Saree</h5>
+                        <p class="card-text">Price: $250</p>
+                        <p class="card-text">Details: A luxurious silk saree that adds a royal touch to any occasion.</p>
+                        <p>Rating...</p>
+                        <!-- Editable Rating -->
+                        <div class="rating" data-rating="5">
+                            <i class="fas fa-star" data-value="1"></i>
+                            <i class="fas fa-star" data-value="2"></i>
+                            <i class="fas fa-star" data-value="3"></i>
+                            <i class="fas fa-star" data-value="4"></i>
+                            <i class="fas fa-star" data-value="5"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.rating i').forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-value');
+                const parent = this.parentElement;
+                
+                parent.setAttribute('data-rating', rating);
+                
+                updateStars(parent, rating);
+            });
+        });
+
+        function updateStars(parent, rating) {
+            const stars = parent.querySelectorAll('i');
+            stars.forEach(star => {
+                const value = star.getAttribute('data-value');
+                if (value <= rating) {
+                    star.classList.remove('far');
+                    star.classList.add('fas');
+                } else {
+                    star.classList.remove('fas');
+                    star.classList.add('far');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
