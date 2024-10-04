@@ -2385,8 +2385,8 @@ fieldset:disabled a.btn {
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #c5837c;
-  border-color: #c17a74;
+  background-color: #ffc107;
+  border-color: #ffc107;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -4016,7 +4016,7 @@ input[type="button"].btn-block {
 
 .navbar {
   position: relative;
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
@@ -4671,6 +4671,28 @@ a.badge:hover, a.badge:focus {
 .badge:empty {
   display: none;
 }
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffc107; 
+  color: white;              
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+
+.back-button i {
+  margin-right: 8px; 
+  font-size: 20px;  
+  color: white;
+}
+
+.back-button:hover {
+  background-color: #ffc107; 
+}
+
 
 .btn .badge {
   position: relative;
