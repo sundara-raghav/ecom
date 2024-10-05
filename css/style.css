@@ -9625,24 +9625,3 @@ a.text-dark:hover, a.text-dark:focus {
   object-fit: cover; /* This will ensure the image fills the space while maintaining aspect ratio */
 }
 
-
-.custom-btn {
-  background-color: #ffc107;
-  border-color: #ffc107;
-  color: white; /* Change text color to white */
-}
-
-.custom-btn:hover {
-  background-color: #ffc107; /* Darker shade on hover */
-  border-color: #ffc107;
-}
-.custom-pay-btn {
-  background-color: #ffc107;
-  border-color: #ffc107;
-  color: white; /* Change text color to white */
-}
-
-.custom-pay-btn:hover {
-  background-color: #ffc107; /* Darker shade on hover */
-  border-color: #ffc107;
-}
