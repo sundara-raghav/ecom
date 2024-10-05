@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Load Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+
+</head>
+<body>
+
+<!-- Payment Start -->
+ <!-- Back Arrow Button -->
+ <a href="checkout.html" class="btn btn-primary" style="background-color: #ffc107; border-color: #ffc107; color: white;">
+    <i class="fas fa-arrow-left"></i> 
+</a>
+<div class="container-fluid pt-5">
+    <div class="row px-xl-5">
+        <div class="col-lg-8 offset-lg-2">
+            <div class="card">
+                <div class="card-header bg-secondary text-white">
+                    <h4 class="font-weight-semi-bold m-0">Payment Details</h4>
+                </div>
+                <div class="card-body">
+                    <form action="payment-success.html" method="POST">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label>Cardholder Name</label>
+                                <input class="form-control" type="text" placeholder="John Doe" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Card Number</label>
+                                <input class="form-control" type="text" placeholder="1234 5678 9101 1121" required>
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <label>Expiration Month</label>
+                                <input class="form-control" type="text" placeholder="MM" required>
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <label>Expiration Year</label>
+                                <input class="form-control" type="text" placeholder="YYYY" required>
+                            </div>
+                            <div class="col-md-4 form-group">
+                                <label>CVV</label>
+                                <input class="form-control" type="text" placeholder="123" required>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <label>Billing Address</label>
+                                <input class="form-control" type="text" placeholder="123 Main Street" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>City</label>
+                                <input class="form-control" type="text" placeholder="New York" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>ZIP Code</label>
+                                <input class="form-control" type="text" placeholder="12345" required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>Country</label>
+                                <select class="custom-select" required>
+                                    <option selected>United States</option>
+                                    <option>India</option>
+                                    <option>Canada</option>
+                                    <option>United Kingdom</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label>State</label>
+                                <input class="form-control" type="text" placeholder="New York" required>
+                            </div>
+                        </div>
+                        <center><button class="btn" style="background-color: #ffc107; color: white;" type="submit" >
+                            Pay Now
+                        </button></center>                      
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Payment End -->
+
+<!-- Success or Failure Handling -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2 text-center">
+            <p class="lead">For testing purposes, this form redirects to a success page. In production, this would handle real payment transactions securely via a payment processor.</p>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
