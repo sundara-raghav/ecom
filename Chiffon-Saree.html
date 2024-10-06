@@ -23,23 +23,23 @@
             margin: 10px;
         }
 
-.add-to-cart {
-    background-color: #ffc107; /* Set to your desired color */
-    color: white; /* Text color */
-}
+        .add-to-cart {
+            background-color: #ffc107; /* Set to your desired color */
+            color: white; /* Text color */
+        }
 
-.add-to-cart:hover {
-    background-color: #e0a800; /* Darker shade for hover effect */
-}
+        .add-to-cart:hover {
+            background-color: #e0a800; /* Darker shade for hover effect */
+        }
 
-.buy-now {
-    background-color: #ffc107; /* Set to your desired color */
-    color: white; /* Text color */
-}
+        .buy-now {
+            background-color: #ffc107; /* Set to your desired color */
+            color: white; /* Text color */
+        }
 
-.buy-now:hover {
-    background-color: #e0a800; /* Darker shade for hover effect */
-}
+        .buy-now:hover {
+            background-color: #e0a800; /* Darker shade for hover effect */
+        }
     </style>
 </head>
 <body>
@@ -76,15 +76,8 @@
                                 <!-- Flipkart Add to Cart Button -->
                                 <button class="btn add-to-cart">Add to Cart</button>
                                 <!-- Flipkart Buy Now Button -->
-                                <button class="btn buy-now"id="buyNowBtn">Buy Now</button>
+                                <button class="btn buy-now" id="buyNowBtn1">Buy Now</button>
                             </center>       
-                            <script>
-                                // Add an event listener to the Buy Now button
-                                document.getElementById('buyNowBtn').addEventListener('click', function() {
-                                    // Redirect to the payment page
-                                    window.location.href = 'payment.html'; // Replace 'payment.html' with the actual URL of your payment page
-                                });
-                            </script>
                         </div>
                     </div>
                 </div>
@@ -112,16 +105,8 @@
                             <!-- Flipkart Add to Cart Button -->
                             <button class="btn add-to-cart">Add to Cart</button>
                             <!-- Flipkart Buy Now Button -->
-                            <button class="btn buy-now"id="buyNowBtn">Buy Now</button>
+                            <button class="btn buy-now" id="buyNowBtn2">Buy Now</button>
                         </center>       
-                        <script>
-                            // Add an event listener to the Buy Now button
-                            document.getElementById('buyNowBtn').addEventListener('click', function() {
-                                // Redirect to the payment page
-                                window.location.href = 'payment.html'; // Replace 'payment.html' with the actual URL of your payment page
-                            });
-                        </script>
-                        
                     </div>
                 </div>
             </div>
@@ -148,15 +133,8 @@
                             <!-- Flipkart Add to Cart Button -->
                             <button class="btn add-to-cart">Add to Cart</button>
                             <!-- Flipkart Buy Now Button -->
-                            <button class="btn buy-now"id="buyNowBtn">Buy Now</button>
+                            <button class="btn buy-now" id="buyNowBtn3">Buy Now</button>
                         </center>       
-                        <script>
-                            // Add an event listener to the Buy Now button
-                            document.getElementById('buyNowBtn').addEventListener('click', function() {
-                                // Redirect to the payment page
-                                window.location.href = 'payment.html'; // Replace 'payment.html' with the actual URL of your payment page
-                            });
-                        </script>
                     </div>
                 </div>
             </div>
@@ -183,15 +161,8 @@
                             <!-- Flipkart Add to Cart Button -->
                             <button class="btn add-to-cart">Add to Cart</button>
                             <!-- Flipkart Buy Now Button -->
-                            <button class="btn buy-now"id="buyNowBtn">Buy Now</button>
+                            <button class="btn buy-now" id="buyNowBtn4">Buy Now</button>
                         </center>       
-                        <script>
-                            // Add an event listener to the Buy Now button
-                            document.getElementById('buyNowBtn').addEventListener('click', function() {
-                                // Redirect to the payment page
-                                window.location.href = 'payment.html'; // Replace 'payment.html' with the actual URL of your payment page
-                            });
-                        </script>
                     </div>
                 </div>
             </div>
@@ -199,6 +170,20 @@
     </div>
 
     <script>
+        // Add event listeners for Buy Now buttons
+        document.getElementById('buyNowBtn1').addEventListener('click', function() {
+            window.location.href = 'payment.html'; 
+        });
+        document.getElementById('buyNowBtn2').addEventListener('click', function() {
+            window.location.href = 'payment.html'; 
+        });
+        document.getElementById('buyNowBtn3').addEventListener('click', function() {
+            window.location.href = 'payment.html'; 
+        });
+        document.getElementById('buyNowBtn4').addEventListener('click', function() {
+            window.location.href = 'payment.html'; 
+        });
+
         document.querySelectorAll('.rating i').forEach(star => {
             star.addEventListener('click', function() {
                 const rating = this.getAttribute('data-value');
