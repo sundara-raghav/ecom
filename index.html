@@ -68,7 +68,7 @@
                     <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">S</span>Shanthi</h1>
                 </a>
             </div>
-            <div class="col-lg-6 col-6 text-left">
+            <!-- <div class="col-lg-6 col-6 text-left">
                 <form action="">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search for products">
@@ -79,7 +79,20 @@
                         </div>
                     </div>
                 </form>
+            </div> -->
+
+            <div class="search-container">
+                <form id="searchForm">
+                    <div class="input-group">
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search for products, brands, and more..." autocomplete="off">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </div>
+                    <div id="autocompleteList" class="autocomplete-items"></div>
+                </form>
             </div>
+            
             <div class="col-lg-3 col-6 text-right">
                 <a href="" class="btn border">
                     <i class="fas fa-heart text-primary"></i>

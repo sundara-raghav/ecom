@@ -102,3 +102,97 @@
     
 })(jQuery);
 
+const productList = [
+    { name: "Silk Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\Silk-Saree.html" },
+    { name: "Soft Silk Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\Soft-Silk-Saree.html" },
+    { name: "Cotton Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\Cotton-Saree.html" },
+    { name: "Banarasi Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\Banarasi-Saree.html" },
+    { name: "Mysore Silk Saree", url: "/mysore-silk-saree" },
+    { name: "Kanjivaram Saree", url: "/kanjivaram-saree" },
+    { name: "Chiffon Saree", url: "/chiffon-saree" },
+    { name: "Kanjipuram Saree", url: "/kanjipuram-saree" }
+];
+
+document.getElementById('searchInput').addEventListener('input', function() {
+    let input = this.value.toLowerCase();
+    let autocompleteList = document.getElementById('autocompleteList');
+    autocompleteList.innerHTML = '';
+
+    if (!input) {
+        return false;
+    }
+
+    productList.forEach(function(product) {
+        if (product.name.toLowerCase().indexOf(input) !== -1) {
+            let item = document.createElement('div');
+            item.innerHTML = product.name;
+            item.addEventListener('click', function() {
+                // On selecting an item, go directly to the saree's page
+                document.getElementById('searchInput').value = product.name;
+                autocompleteList.innerHTML = '';
+                window.location.href = product.url;
+            });
+            autocompleteList.appendChild(item);
+        }
+    });
+});
+
+document.getElementById('searchForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    let query = document.getElementById('searchInput').value.toLowerCase();
+    
+    // Find the matching product in the productList
+    let matchedProduct = productList.find(product => product.name.toLowerCase() === query);
+    
+    if (matchedProduct) {
+        // Redirect to the matched product's specific page
+        window.location.href = matchedProduct.url;
+    } else {
+        // If no specific match is found, redirect to a generic search results page
+        window.location.href = '/search-results?query=' + encodeURIComponent(query);
+    }
+});
+
+
+// const productList = [
+//     "Silk Saree",
+//     "Soft Silk Saree",
+//     "Cotton Saree",
+//     "Banarasi Saree",
+//     "Mysore Silk Saree",
+//     "Kanjivaram Saree",
+//     "Chiffon Saree",
+//     "Kanjipuram Saree"
+// ];
+
+
+// document.getElementById('searchInput').addEventListener('input', function() {
+//     let input = this.value.toLowerCase();
+//     let autocompleteList = document.getElementById('autocompleteList');
+//     autocompleteList.innerHTML = '';
+
+//     if (!input) {
+//         return false;
+//     }
+
+//     productList.forEach(function(product) {
+//         if (product.toLowerCase().indexOf(input) !== -1) {
+//             let item = document.createElement('div');
+//             item.innerHTML = product;
+//             item.addEventListener('click', function() {
+//                 document.getElementById('searchInput').value = product;
+//                 autocompleteList.innerHTML = '';
+//                 window.location.href = '/search-results?query=' + encodeURIComponent(product);
+//             });
+//             autocompleteList.appendChild(item);
+//         }
+//     });
+// });
+
+// document.getElementById('searchForm').addEventListener('submit', function(e) {
+//     e.preventDefault();
+//     let query = document.getElementById('searchInput').value;
+//     if (query) {
+//         window.location.href = '/search-results?query=' + encodeURIComponent(query);
+//     }
+// });
