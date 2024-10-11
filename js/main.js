@@ -107,10 +107,10 @@ const productList = [
     { name: "Soft Silk Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\Soft-Silk-Saree.html" },
     { name: "Cotton Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\Cotton-Saree.html" },
     { name: "Banarasi Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\Banarasi-Saree.html" },
-    { name: "Mysore Silk Saree", url: "/mysore-silk-saree" },
+    { name: "Mysore Silk Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\mysore-saree.html" },
     { name: "Kanjivaram Saree", url: "/kanjivaram-saree" },
-    { name: "Chiffon Saree", url: "/chiffon-saree" },
-    { name: "Kanjipuram Saree", url: "/kanjipuram-saree" }
+    { name: "Chiffon Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\Chiffon-Saree.html" },
+    { name: "Kanjipuram Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\kanjipuram.html" }
 ];
 
 document.getElementById('searchInput').addEventListener('input', function() {
