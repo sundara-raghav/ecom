@@ -30,7 +30,7 @@
 
 <body>
     <!-- Topbar Start -->
-    <!-- <div class="container-fluid">
+    <div class="container-fluid">
         <div class="row bg-secondary py-2 px-xl-5">
             <div class="col-lg-6 d-none d-lg-block">
                 <div class="d-inline-flex align-items-center">
@@ -60,25 +60,82 @@
                     </a>
                 </div>
             </div>
-        </div> -->
+        </div>
         <div class="row align-items-center py-3 px-xl-5">
             <div class="col-lg-3 d-none d-lg-block">
                 <a href="" class="text-decoration-none">
-                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">S</span>Shanthi Tex</h1>
+                    <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">S</span>Shanthi</h1>
                 </a>
             </div>
-            <div class="col-lg-6 col-6 text-left">
-                <form action="">
+          
+            <div class="search-container">
+                <form id="searchForm">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for products">
+                        <input type="text" id="searchInput" class="form-control" placeholder="Search for products, brands, and more..." autocomplete="off">
                         <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary">
-                                <i class="fa fa-search"></i>
-                            </span>
+                            <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
                         </div>
                     </div>
+                    <div id="autocompleteList" class="autocomplete-items"></div>
                 </form>
             </div>
+            
+
+            
+            <script>
+                const productList = [
+                    { name: "Silk Saree", url: "silk-saree.html" },
+                    { name: "Soft Silk Saree", url: "soft-silk-saree.html" },
+                    { name: "Cotton Saree", url: "cotton-saree.html" },
+                    { name: "Banarasi Saree", url: "banarasi-saree.html" },
+                    { name: "Mysore Silk Saree", url: "mysore-saree.html" },
+                    { name: "Kanjivaram Saree", url: "kanjivaram-saree.html" },
+                    { name: "Chiffon Saree", url: "chiffon-saree.html" },
+                    { name: "Kanjipuram Saree", url: "kanjipuram.html" }
+                ];
+                
+                
+                document.getElementById('searchInput').addEventListener('input', function() {
+                    let input = this.value.toLowerCase();
+                    let autocompleteList = document.getElementById('autocompleteList');
+                    autocompleteList.innerHTML = ''; // Clear the current list
+                
+                    if (!input) return false; // Exit if no input
+                
+                    productList.forEach(function(product) {
+                        if (product.name.toLowerCase().includes(input)) {
+                            let item = document.createElement('div');
+                            item.innerHTML = product.name;
+                            item.addEventListener('click', function() {
+                                document.getElementById('searchInput').value = product.name;
+                                autocompleteList.innerHTML = '';
+                                window.location.href = product.url; // Redirect to specific HTML file
+                            });
+                            autocompleteList.appendChild(item);
+                        }
+                    });
+                });
+                
+                document.getElementById('searchForm').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    let query = document.getElementById('searchInput').value.toLowerCase();
+                
+                    // Find the matching product
+                    let matchedProduct = productList.find(product => product.name.toLowerCase() === query);
+                
+                    if (matchedProduct) {
+                        // Redirect to the product's HTML file if an exact match is found
+                        window.location.href = matchedProduct.url;
+                    } else {
+                        // If no match is found, you can redirect to a general search page or show an alert
+                        window.location.href = 'search-results.html?query=' + encodeURIComponent(query);
+                    }
+                });
+                </script>
+                
+
+            
+            
             <div class="col-lg-3 col-6 text-right">
                 <a href="" class="btn border">
                     <i class="fas fa-heart text-primary"></i>

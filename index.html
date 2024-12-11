@@ -68,31 +68,7 @@
                     <h1 class="m-0 display-5 font-weight-semi-bold"><span class="text-primary font-weight-bold border px-3 mr-1">S</span>Shanthi</h1>
                 </a>
             </div>
-            <!-- <div class="col-lg-6 col-6 text-left">
-                <form action="">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search for products">
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary">
-                                <i class="fa fa-search"></i>
-                            </span>
-                        </div>
-                    </div>
-                </form>
-            </div> -->
-
-            <!-- <div class="search-container">
-                <form id="searchForm">
-                    <div class="input-group">
-                        <input type="text" id="searchInput" class="form-control" placeholder="Search for products, brands, and more..." autocomplete="off">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
-                        </div>
-                    </div>
-                    <div id="autocompleteList" class="autocomplete-items"></div>
-                </form>
-            </div> -->
-
+          
             <div class="search-container">
                 <form id="searchForm">
                     <div class="input-group">
@@ -158,55 +134,7 @@
                 });
                 </script>
                 
-            <!-- <script>
-            const productList = [
-                { name: "Silk Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\Silk-Saree.html" },
-                { name: "Soft Silk Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\Soft-Silk-Saree.html" },
-                { name: "Cotton Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\Cotton-Saree.html" },
-                { name: "Banarasi Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\Banarasi-Saree.html" },
-                { name: "Mysore Silk Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\mysore-saree.html" },
-                { name: "Kanjivaram Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\kanjivaram-saree.html" },
-                { name: "Chiffon Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\Chiffon-Saree.html" },
-                { name: "Kanjipuram Saree", url: "C:\Users\DHARSHINI\Desktop\ecom\ecom\kanjipuram.html" }
-            ];
-            
-            document.getElementById('searchInput').addEventListener('input', function() {
-                let input = this.value.toLowerCase();
-                let autocompleteList = document.getElementById('autocompleteList');
-                autocompleteList.innerHTML = ''; // Clear the current list
-            
-                if (!input) return false; // Exit if no input
-            
-                productList.forEach(function(product) {
-                    if (product.name.toLowerCase().includes(input)) {
-                        let item = document.createElement('div');
-                        item.innerHTML = product.name;
-                        item.addEventListener('click', function() {
-                            document.getElementById('searchInput').value = product.name;
-                            autocompleteList.innerHTML = '';
-                            window.location.href = product.url; // Redirect to specific HTML file
-                        });
-                        autocompleteList.appendChild(item);
-                    }
-                });
-            });
-            
-            document.getElementById('searchForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                let query = document.getElementById('searchInput').value.toLowerCase();
-            
-                // Find the matching product
-                let matchedProduct = productList.find(product => product.name.toLowerCase() === query);
-            
-                if (matchedProduct) {
-                    // Redirect to the product's HTML file if an exact match is found
-                    window.location.href = matchedProduct.url;
-                } else {
-                    // If no match is found, you can redirect to a general search page or show an alert
-                    window.location.href = 'search-results.html?query=' + encodeURIComponent(query);
-                }
-            });
-            </script> -->
+
             
             
             <div class="col-lg-3 col-6 text-right">
